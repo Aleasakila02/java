@@ -1,0 +1,28 @@
+<html>
+    <head><title>latihan dengan objek text</title></head>
+    <body>
+        <script language = "javascript">
+            function tekan()
+            {
+                var namastr = (document.fform.nama.value);
+                var alamatstr = (document.fform.alamat.value);
+                document.fform.onama.value = namastr;
+                document.fform.oalamat.value = alamatstr;
+            }
+        </script>
+        <form name="fform">
+            <h1>memasukkan data dengan objek teks</h1><hr>
+            <pre>
+                Nama anda  : <input type="text" size="11" name="nama">
+                Alamat     : <input type="text" size="25" name="alamat">
+            </pre>
+            <br>
+            <input type="button" value="kirim" onclick="tekan()">
+            <input type="reset" value="ulang">
+            <pre>
+                Jadi nama anda adalah : <input type="text" size="11" name="nama">
+                Alamat anda di        : <input type="text" size="25" name="alamat"> 
+            </pre>
+        </form>
+    </body>
+</html>

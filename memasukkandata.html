@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>masukan data bilangan</title>
+</head>
+
+<body>
+    <p>
+        <script language="javascript">
+            function jumlah() {
+                var bil1 = parseFloat(document.fform.bilangan1.value);
+                if (isNaN(bil1))
+                    bil1 = 0.0;
+                var bil2 = parseFloat(document.fform.bilangan2.value);
+                if (isNaN(bil2))
+                    bil2 = 0.0;
+                var hasil = bil1 + bil2;
+                alert("hasil penjumlahan = " + hasil);
+            }
+        </script>
+    </p>
+    <form name="ffrom">
+        <h1><br>memasukkan data lewat keyboard </h1>
+        <pre>
+            bilangan pertama : <input type="text" size="11" name="bilangan1">
+            bilangan kedua   : <input type="text" size="11" name="bilangan2">
+        </pre>
+        <p>
+            <input type="button" value="jumlahkan" onclick="jumlah()">
+            <input type="reset" value="ulang">
+    </form>
+</body>
+</html>
