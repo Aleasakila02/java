@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data Siswa Cute</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #ffd6ec, #e5c9ff);
+            font-family: "Poppins", sans-serif;
+            color: #444;
+        }
+
+        .container {
+            width: 700px;
+            margin: 30px auto;
+            background: #ffffffa8;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(5px);
+        }
+
+        h2,
+        h3 {
+            text-align: center;
+            color: #c04ccf;
+            margin: 5px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        td {
+            padding: 8px;
+            font-size: 15px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 95%;
+            padding: 8px;
+            border-radius: 10px;
+            border: 2px solid #e4b5ff;
+            font-size: 14px;
+            outline: none;
+            background: #fff7ff;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #c96aff;
+            background: #ffeaff;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #f8a2e9;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-right: 10px;
+            color: white;
+            box-shadow: 0 4px 10px rgba(255, 110, 223, 0.5);
+        }
+
+        .btn:hover {
+            background: #e46cd6;
+        }
+
+        .output-box {
+            margin-top: 25px;
+            padding: 20px;
+            background: #ffffffd1;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .label {
+            color: #c05ddc;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Data Siswa</h2>
+        <h3>SMK AL-Ghifari Banyuresmi</h3>
+        <hr>
+
+        <table>
+            <tr>
+                <td class="label">NISN</td>
+                <td><input type="text" id="nisn"></td>
+            </tr>
+
+            <tr>
+                <td class="label">Nama Siswa</td>
+                <td><input type="text" id="nama"></td>
+            </tr>
+
+            <tr>
+                <td class="label">Jenis Kelamin</td>
+                <td>
+                    <select id="jk">
+                        <option value="Perempuan">Perempuan</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Agama</td>
+                <td>
+                    <select id="agama">
+                        <option>Islam</option>
+                        <option>Kristen</option>
+                        <option>Katolik</option>
+                        <option>Hindu</option>
+                        <option>Buddha</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Status</td>
+                <td>
+                    <select id="status">
+                        <option>Kawin</option>
+                        <option>Tidak Kawin</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Jurusan</td>
+                <td>
+                    <select id="jurusan">
+                        <option>RPL</option>
+                        <option>AKL</option>
+                        <option>FKK</option>
+                        <option>TBSM</option>
+                        <option>TKRO</option>
+                        <option>OTKP</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Komentar</td>
+                <td><textarea id="komentar" rows="4"></textarea></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <button class="btn" onclick="kirimData()">kirim</button>
+                    <button class="btn" onclick="location.reload()">ulang</button>
+                </td>
+            </tr>
+        </table>
+
+        <div class="output-box">
+            <h3> Hasil Output </h3>
+
+            <p><span class="label">NISN: </span><span id="hasil_nisn"></span></p>
+            <p><span class="label">Nama Siswa: </span><span id="hasil_nama"></span></p>
+            <p><span class="label">Jenis Kelamin: </span><span id="hasil_jk"></span></p>
+            <p><span class="label">Agama: </span><span id="hasil_agama"></span></p>
+            <p><span class="label">Status: </span><span id="hasil_status"></span></p>
+            <p><span class="label">Jurusan: </span><span id="hasil_jurusan"></span></p>
+            <p><span class="label">Komentar: </span><span id="hasil_komentar"></span></p>
+        </div>
+    </div>
+
+
+    <script>
+        function kirimData() {
+            document.getElementById("hasil_nisn").innerHTML = document.getElementById("nisn").value;
+            document.getElementById("hasil_nama").innerHTML = document.getElementById("nama").value;
+            document.getElementById("hasil_jk").innerHTML = document.getElementById("jk").value;
+            document.getElementById("hasil_agama").innerHTML = document.getElementById("agama").value;
+            document.getElementById("hasil_status").innerHTML = document.getElementById("status").value;
+            document.getElementById("hasil_jurusan").innerHTML = document.getElementById("jurusan").value;
+            document.getElementById("hasil_komentar").innerHTML = document.getElementById("komentar").value;
+        }
+    </script>
+
+</body>
+
+</html>

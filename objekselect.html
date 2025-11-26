@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>latihan dengan objek select</title>
+</head>
+
+<body>
+    <script language="javascript">
+        function tekan() {
+            var jurusanstr = (document.fform.jurusan.value);
+            document.fform.Ojurusan.value = jurusanstr;
+        }
+    </script>
+    <form name="fform">
+        <h1>menggunakan objek select</h1>
+        <h3>masukan :</h3>
+        jurusan di alghifari :<select name="jurusan" size="1">
+            <option value="RPL">RPL</option>
+            <option value="AKL">AKL</option>
+            <option value="OTKP">OTKP</option>
+            <option value="TBSM">TBSM</option>
+            <option value="TKRO">TKRO</option>
+            <option value="FKK">FKK</option>
+        </select>
+        <input type="button" value="kirim" onclick="tekan()">
+        <input type="reset" value="ulang">
+        <h3>output jurusan :</h3>
+        <input type="text" name="Ojurusan" size="30">
+    </form>
+</body>
+
+</html>
